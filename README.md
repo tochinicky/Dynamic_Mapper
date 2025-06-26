@@ -104,7 +104,8 @@ public class TripAdvisorReservation
 ## 2. Implement mapper
 
 ```csharp
-public class TripAdvisorMapper :
+// Infrastructure/TripAdvisor/Mappers/TripAdvisorReservationProvider.cs
+public class TripAdvisorReservationProvider :
     IMapper<Reservation, TripAdvisorReservation>
 {
     public TripAdvisorReservation Map(Reservation source)
@@ -117,6 +118,7 @@ public class TripAdvisorMapper :
 ## 3. Register type
 
 ```csharp
+// Application/Helper/TypeResolver.cs
 // In TypeResolver initialization
  ["TripAdvisor.Reservation"] = typeof(TripAdvisorReservation),
 ```

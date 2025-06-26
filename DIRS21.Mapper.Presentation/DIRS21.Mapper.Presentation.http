@@ -1,0 +1,6 @@
+@DIRS21.Mapper.Presentation_HostAddress = http://localhost:5237
+
+GET {{DIRS21.Mapper.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

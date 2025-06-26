@@ -31,7 +31,6 @@ A .NET 8-based dynamic mapping system that converts between DIRS21's internal da
 
 # Architecture <a name="architecture"></a>
 
-<!-- ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/29289689/459589933-eb55d0c8-9eac-40a5-9b06-1e33225ac5b0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250626%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250626T192150Z&X-Amz-Expires=300&X-Amz-Signature=5b4ee7fd313cf948e946fce53e2a902dac702035796bcccc6fa9948b2da41b60&X-Amz-SignedHeaders=host) -->
 
 ![cleanArchitecture](./assets/cleanArch.png)
 
@@ -130,13 +129,10 @@ public class TripAdvisorReservationProvider :
 ```csharp
 services.Scan(scan => scan
     .FromApplicationDependencies()
-    .AddClasses(c => c.AssignableTo(typeof(IMapper<,>)))
+    .AddClasses(c => c.AssignableTo(typeof(IMappingProvider<,>)))
     .AsImplementedInterfaces()
     .WithTransientLifetime());
 ```
-
-<!--
-![Image](https://github-production-user-asset-6210df.s3.amazonaws.com/29289689/459590547-bcc1c70b-1199-4512-b812-54efa4ab5e8c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250626%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250626T192322Z&X-Amz-Expires=300&X-Amz-Signature=c2f3da18d40afd2c106aa81d8f0e3bd683d80b70297aeca85168927bd1bb60c5&X-Amz-SignedHeaders=host) -->
 
 ![cleanArchitecture](./assets/errorhandling.png)
 

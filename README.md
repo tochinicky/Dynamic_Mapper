@@ -136,7 +136,6 @@ services.Scan(scan => scan
     .WithTransientLifetime());
 ```
 
-![cleanArchitecture](./assets/errorhandling.png)
 
 ## 5. Error Handling <a name="error-handling1"></a>
 
@@ -146,6 +145,7 @@ services.Scan(scan => scan
 | Missing mapper      | `MapperNotFoundException`    | "No mapper for Model.Reservation → Google.GoogleReservation" |
 | Validation failure  | `MappingValidationException` | "Reservation ID is required"                                 |
 
+![cleanArchitecture](./assets/errorhandling.png)
 ---
 
 ## 6. Assumptions & Limitations <a name="limitations"></a>

@@ -126,6 +126,8 @@ public class TripAdvisorReservationProvider :
 
 **Mappers auto-register via:**
 
+### **Auto-Discovery Setup**
+**Dependency Registration (Scrutor)** 
 ```csharp
 services.Scan(scan => scan
     .FromApplicationDependencies()
